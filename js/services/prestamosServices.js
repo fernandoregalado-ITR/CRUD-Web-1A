@@ -2,7 +2,7 @@
 const API_URL = "https://retoolapi.dev/L5Odyt/Prestamos";
 
 // Función para obtener datos de la API
-export async function getPrestamos() {
+export async function getPRESTAMOS() {
     try {
         const response = await fetch(API_URL); // GET por defecto
 

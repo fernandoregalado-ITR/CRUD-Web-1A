@@ -1,4 +1,4 @@
-import { getPrestamos, agregarPrestamos, deletePrestamo, updatePrestamo, getPrestamo } from "../services/prestamosServices.js";
+import { getPrestamos, agregarPrestamos, deletePrestamo, updatePrestamo, getPRESTAMOS } from "../services/prestamosServices.js";
 
 // Referencia a los elementos de la página (DOM)
 const frmAddPrestamos = document.getElementById("frmAddPrestamos"); // tbody
@@ -123,7 +123,7 @@ async function deletePrestamos(id) {
 }
 
 //Función para colocar los valores en los campos del formulario
-async function getPrestamo(id) {
+async function getPrestamos(id) {
     try {
         const person = await getPerson(id);
 
