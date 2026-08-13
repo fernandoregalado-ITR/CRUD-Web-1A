@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <!-- Configuración de caracteres especiales y diseño adaptable para dispositivos móviles -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prestamos</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+
+</head>
+
+<body class="bg-light">
+
+    <main class="container py-5">
+
+        <section class="text-center mb-5">
+            <h1 class="fw-bold"> préstamos de equipo audiovisual</h1>
+            <p class="text-muted">
+                préstamos de equipo audiovisual
+            </p>
+        </section>
+
+        <section class="card shadow-sm mb-5">
+            <div class="card-header bg-primary text-white">
+                <h2 class="h5 mb-0">Agregar prestamos</h2>
+            </div>
+
+            <div class="card-body">
+                <!-- Formulario para agregar prestamos -->
+                <form id="frmAddPrestamos">
+                    <!-- Campo oculto para guardar el ID (para actualizar) -->
+                    <input type="hidden" id="idPrestamo">
+
+                    <div class="my-3 form-group">
+                        <label for="txtSolicitante" class="form-label">Solicitante:</label>
+                        <input type="text" id="txtSolicitante" class="form-control" required>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="txtEquipo" class="form-label">Equipo</label>
+                        <input type="text" id="txtEquipo" class="form-control" required>
+                    </div>
+
+
+                    <div class="my-3 form-group">
+                        <label for="txtFechaPrestamo" class="form-label">Fecha prestamo:</label>
+                        <input type="date" id="txtFechaPrestamo" class="form-control" required>
+                    </div>
+
+                    <div class="my-3 form-group">
+                        <label for="txtEstado" class="form-label">Estado:</label>
+                        <input type="text" id="txtEstado" class="form-control" required>
+                    </div>
+
+                    <div class="form-group my-3">
+                        <button id="btnAgregarPrestamo" class="btn btn-primary" type="submit">Guardar</button>
+                        <button id="btnCancel" type="button" class="btn btn-secondary d-none">Cancelar</button>
+                    </div>
+                 </form>
+            </div>
+        </section>
+
+
+        <section class="card shadow-sm text-center">
+            <div class="card-header bg-dark text-white">
+                <h2 class="h5 mb-0">Lista de prestamos</h2>
+            </div>
+
+            <div class="card-body">
+
+                <div id="mensaje" class="alert d-none" role="alert"></div>
+
+                <div class="table-responsive">
+                    <table class="table table-striped table-hover align-middle">
+                        <thead class="table-dark">
+                            <tr>
+                                <th>ID</th>
+                                <th>Solicitante</th>
+                                <th>Equipo</th>
+                                <th>Fecha prestamo</th>
+                                <th>Estado</th>
+                                <th>Acciones</th>
+                            </tr>
+                        </thead>
+                        <tbody id="tbPrestamos">
+                            <!-- Aquí se cargarán las personas desde JavaScript -->
+                           <tr>
+                            <td colspan="6" class="text-center">Cargando...</td>
+                           </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+
+    <!-- Archivo principal de Js usando modulos -->
+    <script type="module" src="js/controllers/indexController.js"></script> 
+
+</body>
+
+</html>
